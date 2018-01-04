@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <style>
+  body {background:#ccc;}
+h1,h2 {
+  font-size:1.5em;
+  margin:0.5em 0 0.1em;
+  color:#fff;
+  line-height:1;
+  text-shadow:0 0 0.05em #333;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+label {
+  cursor:pointer;
+  color:#333;
+  background:#f8f8f8;
+  box-shadow: 0 0 2px 1px #333;
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  margin:0.5em 0;
+}
+label:hover {
+  box-shadow:
+    0 0 2px 2px #131,
+    0 0 2px 1px #131;
+}
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  color:#fff;
+  background:#999;
+  box-shadow:
+    0 0 2px 0px #333,
+    0px 0 1px 0 #333 inset,
+    0 0 0px 1px #666;
+}
+.girl {
+  font-size:2em;
+  margin: -3em auto 0;
+  width:4em;
+  height:12em;
+  background:#c66;
+  border-radius:20%;
+  border:0.2em solid #333;
+  position:relative;
+}
+.girl:after {
+  content:"";
+  display:block;
+  width:2px;
+  height:2px;
+  background-color:#000;
+  border-radius:50%;
+  position:absolute;
+  left:-0.5em;
+  top:3em;
+  box-shadow:
+    /* eye r */
+    3.5em 0.6em 0 0.2em #fff,
+    4em 1em 0 0.7em #003,
+    4.2em 1em 0 1em #fff,
+    4.2em 1em 0 1.1em #000,
+    4.4em 1em 0 1.3em #000,
+    4.4em 0.3em 0 1.1em #fca,
+    4.4em 0em 0 1em #000,
+  
+    /* eye l */
+    0.5em 0.6em 0 0.2em #fff,
+    1.0em 1em 0 0.7em #003,
+    0.8em 1em 0 1em #fff,
+    0.8em 1em 0 1.1em #000,
+    0.6em 1em 0 1.3em #000,
+    0.6em 0.3em 0 1.1em #fca,
+    0.6em 0em 0 1em #000,
+  
+    /* mouse */
+    2.5em 2.8em 0 1.6em #fca,
+    2.5em 3.2em 0 1.4em #d63,
+  
+    /* face */
+    2.5em 0em 0 5em #fca,
+    2.5em 0em 0 5.2em #333,
+  
+    /* neck */
+    2.5em 4.1em 0 1.7em #fca,
+    2.5em 4em 0 2em #333,
+    0 0 0 0 transparent;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.girl:before {
+  content:"";
+  display:block;
+  width:11em;
+  height:13em;
+  border-radius:50%;
+  position:absolute;
+  left:-3.5em;
+  top:-3em;
+  z-index:10;
+  background:transparent;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  box-shadow:
+    /*heir*/
+    0.8em 1.9em 0 -1em #002 inset,
+    1.1em 2em 0 -1em #d99 inset,
+    1.6em 2.1em 0 -1em #002 inset,
+    1.9em 2.3em 0 -1em #d99 inset,
+    2.9em 2.3em 0 -1em #002 inset,
+    -0em 1.8em 0 -1em #002 inset,
+    -1.5em 1.8em 0 -1em #002 inset,
+    -1.8em 1.4em 0 -1em #b66 inset,
+    -2.1em 1.6em 0 -1em #002 inset,
+    -2.3em 1.9em 0 -1em #b66 inset,
+    -2.4em 2em 0 -1em #002 inset,
+    -2.6em 2.8em 0 -1em #b66 inset,
+    -2.8em 3.3em 0 -1em #002 inset,
+    0 0 0 0 transparent;
+}
+/* smile */
+#smile:checked ~ .girl:after {
+  box-shadow:
+    /* eye r */
+    3.6em 0.6em 0 0.3em #fff,
+    4em 1em 0 0.8em #003,
+    4.2em 1.1em 0 1.1em #fff,
+    4.3em 1.3em 0 1.2em #fca,
+    4.4em 1em 0 1.3em #000,
+    4.4em 0em 0 1.1em #fca,
+    4.4em -0.3em 0 1em #000,
+  
+    /* eye l */
+    0.4em 0.6em 0 0.3em #fff,
+    0.8em 1em 0 0.8em #003,
+    0.6em 1.1em 0 1.1em #fff,
+    0.5em 1.3em 0 1.2em #fca,
+    0.4em 1em 0 1.3em #000,
+    0.6em 0em 0 1.1em #fca,
+    0.6em -0.3em 0 1em #000,
+  
+    /* mouse */
+    2.5em 1.8em 0 1.6em #fca,
+    2.5em 3.2em 0 1.4em #d30,
+  
+    /* face */
+    2.5em 0em 0 5em #fca,
+    2.5em 0em 0 5.2em #333,
+  
+    /* neck */
+    2.5em 4.1em 0 1.7em #fca,
+    2.5em 4em 0 2em #333,
+    0 0 0 0 transparent;
+}
+/* angry */
+#angry:checked ~ .girl:after {
+  box-shadow:
+    /* eye r */
+    3.9em 0.9em 0 0.1em #fff,
+    4.4em 1em 0 0.5em #003,
+    4.4em 1.1em 0 0.8em #fff,
+    4.6em 1.3em 0 0.8em #fca,
+    4.4em 1.0em 0 0.9em #000,
+    4.4em -1.7em 0 1.3em #fca,
+    4.4em -1.3em 0 1.2em #000,
+  
+    /* eye l */
+    0.1em 0.6em 0 0.1em #fff,
+    0.8em 1em 0 0.5em #003,
+    0.6em 1.1em 0 0.8em #fff,
+    0.4em 1.3em 0 0.8em #fca,
+    0.6em 1em 0 0.9em #000,
+    0.4em -1.7em 0 1.3em #fca,
+    0.4em -1.3em 0 1.2em #000,
+  
+    /* mouse */
+    2.0em 4.1em 0 0.8em #fca,
+    2.5em 3.5em 0 0.5em #d30,
+  
+    /* face */
+    2.5em -0.1em 0 5em #fca,
+    2.5em -0.1em 0 5.2em #333,
+  
+    /* neck */
+    2.5em 4.1em 0 1.7em #fca,
+    2.5em 4em 0 2em #333,
+    0 0 0 0 transparent;
+}
+/* blue */
+#blue:checked ~ .girl {
+  background:#08a;
+}
+#blue:checked ~ .girl:before {
+  top:-2em;
+  border-radius:50% 50% 10% 10%;
+  box-shadow:
+    /*heir*/
+    0em -1em 0 0em #08a,
+    2.1em 2em 0 -2em #3bb inset,
+    2.6em 2.1em 0 -2em #08a inset,
+    2.9em 2.3em 0 -2em #3bb inset,
+    3.9em 2.3em 0 -2em #08a inset,
+  
+    -2.5em 1.8em 0 -2em #08a inset,
+    -2.8em 1.4em 0 -2em #3bb inset,
+    -3.1em 1.6em 0 -2em #08a inset,
+    -3.3em 1.9em 0 -2em #3bb inset,
+    -3.4em 2.8em 0 -2em #08a inset,
+    -3.6em 2.8em 0 -2em #3bb inset,
+    -3.8em 2.3em 0 -2em #08a inset,
+  
+    -0em 6em 0 -2em #08a inset,
+    0 0 0 0 transparent;
+  }
+/* green */
+#green:checked ~ .girl {
+  background:#063;
+}
+#green:checked ~ .girl:before {
+  width:11em;
+  height:11em;
+  top:-2em;
+  border-radius:50%;
+  box-shadow:
+    /*heir*/
+    3em 2.3em 0 -2em #063 inset,
+  
+    0em 1.8em 0 0.5em #043 inset,
+    
+    -2.5em 1.8em 0 -2em #093 inset,
+    -2.8em 1.4em 0 -2em #063 inset,
+    -3.1em 1.6em 0 -2em #093 inset,
+  
+    -4.3em -4.5em 0 -4.2em #063,
+    -4.8em -2.0em 0 -4em #093,
+    0em -7.0em 0 -4.5em #043,
+    2.5em -6.5em 0 -4em #093,
+    4.3em -4.5em 0 -4em #043,
+    4.8em -1.5em 0 -4.5em #093,
+    -2.2em -6.2em 0 -3em #093,
+  
+    -2.5em -6.5em 0 -3em #063,
+    -4.3em -4.5em 0 -3em #043,
+    -4.8em -2.0em 0 -3em #093,
+    0em -7.0em 0 -3em #063,
+    2.5em -6.5em 0 -3em #043,
+    4.3em -4.5em 0 -3em #063,
+    4.8em -1.5em 0 -3em #043,
+    0em -2em 0 1.2em #063,
+    0 0 0 0 transparent;
+  }
+    </style>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>SVG Game</title>
+  <script lanaguage="JavaScript" src="highscore.js"></script>
+  <script language="JavaScript" src="game.js"></script>
+</head>
+
+<body style="text-align: center">
+    <embed src="game.svg" type="image/svg+xml" width="800" height="600" />
+</body>
+
+</html>
