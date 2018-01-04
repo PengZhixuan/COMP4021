@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Autocomplete - Basic functionality</title>
+	<link rel="stylesheet" href="jquery-ui.css">
+	<script src="jquery-1.11.3.js"></script>
+	<script src="jquery-ui.js"></script>
+	<script>
+		var input_data = [
+			"actionscript",
+			"applescript",
+			"asp",
+			"basic",
+			"c",
+			"c++",
+			"clojure",
+			"cobol",
+			"coldfusion",
+			"erlang",
+			"fortran",
+			"groovy",
+			"haskell",
+			"java",
+			"javascript",
+			"lisp",
+			"perl",
+			"php",
+			"python",
+			"ruby",
+			"scala",
+			"scheme"
+		];
+		function onDocumentReady() {
+			function autocompleteItemSelectedHandler( event, ui ) {
+				var itemDesc = "\""+ui.item.value + "\"" ;
+			      $( "#search" ).val(itemDesc);
+			      return false
+			};
+
+			$( "#search" ).autocomplete({
+				source: input_data,
+				select: autocompleteItemSelectedHandler
+			});
+		};
+		$( document ).ready(onDocumentReady)
+	</script>
+</head>
+<body>
+	<div class="ui-widget">
+		<label for="search">Search: </label>
+		<input id="search">
+	</div>
+</body>
+</html>
+
